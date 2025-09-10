@@ -6,12 +6,11 @@ public class Main {
     public static void main(String[] args) {
         try (Connection conexao = ConexaoDB.conectar()) {
             ProdutoDAO produtoDAO = new ProdutoDAO(conexao);
-
             // Lista todos os produtos (deve estar vazio neste ponto)
             mostrarProdutos(produtoDAO);
 
             // Exemplo de inserção de produtos
-            Produto novoProduto1 = new Produto("Notebook", 10, 1999.99, "Em estoque");
+            Produto novoProduto1 = new Produto("Notebook", 10, 1999.99, "Estoque Baixo");
             Produto novoProduto2 = new Produto("Smartphone", 20, 1499.99, "Estoque Baixo");
             Produto novoProduto3 = new Produto("Tablet", 15, 799.99, "Estoque Baixo");
 
